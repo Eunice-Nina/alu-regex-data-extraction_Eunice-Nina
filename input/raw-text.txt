@@ -1,0 +1,89 @@
+
+ALU Student Services — Internal Communication Log
+Extracted from CRM system | Export Date: 2024-11-15
+
+
+--- TICKET #1042 ---
+From: admissions@alueducation.com
+To: john.mugisha@alumni.alueducation.com
+Subject: Scholarship Renewal
+Date: 2024-10-01 09:30:00
+
+Hi John, your scholarship renewal application has been reviewed. Please visit
+https://portal.alueducation.com/scholarships/renew?id=1042&token=abc123
+for next steps. If you have questions, reach Admissions at +250 788 123 456
+or call our Kigali office at +250-789-000-111.
+
+Payment reference: Card ending 4111-1111-1111-1111 has been flagged — do NOT
+process. Please use the approved payment method on file.
+
+Sent at 9:30 AM | Priority: HIGH
+#ScholarshipRenewal #ALU2024
+
+--- TICKET #1043 ---
+From: grace.otieno@si.alueducation.com
+To: support@alueducation.com
+Subject: Campus portal login issue
+
+The student portal at http://my.alueducation.com is returning a 503 error.
+Students affected include:
+  - amara.diallo@alumni.alueducation.com  (Rwanda campus)
+  - kofi.mensah@gmail.com                 (External applicant)
+  - lena.schmidt@student.berlin.edu       (Exchange partner)
+
+Please escalate to IT. Contact Grace at +49 30 1234 5678 (Berlin desk) or
+her direct line: +250 788 999 000.
+
+Reported time: 11:15 AM | Status: open
+#BugReport #PortalDown
+
+--- TICKET #1044 ---
+From: finance@alueducation.com
+To: billing-team@alueducation.com
+Subject: Term 3 Payment Reconciliation
+
+Cards processed this cycle:
+  5500-0000-0000-0004  — OK
+  4111 1111 1111 1111  — DUPLICATE, reject
+  3714-496353-98431    — AmEx format, verify manually
+  6011000990139424     — OK (Discover)
+
+IMPORTANT: Do NOT log full card numbers in Slack or email threads.
+Mask output as: **** **** **** 1234 for any shared reports.
+
+Total collected: $48,250.00 | Pending: $3,100.50
+Currency breakdown: RWF 12,500,000 | EUR 2,800.00
+
+Posted at 2:45 PM
+#Finance #Reconciliation #ALUBilling
+
+--- TICKET #1045 ---
+From: fake-admin@alueducation.com.attacker.net
+To: it-helpdesk@alueducation.com
+Subject: URGENT — Reset All Passwords <script>alert('xss')</script>
+
+Click here immediately: javascript:void(document.cookie)
+Or visit: http://totally-legit-alu.phishing.io/reset?admin=true
+
+This message contains SQL injection attempt: ' OR '1'='1
+And another: ; DROP TABLE students; --
+
+Note: This email SHOULD be flagged as suspicious. The domain does not match
+@alueducation.com, and the content contains known hostile patterns.
+
+Attempted card: 0000-0000-0000-0000 (test/invalid)
+
+--- GENERAL SYSTEM NOTICE ---
+For IT queries: it-support@alueducation.com | Hours: 08:00–17:00 EAT
+Alumni portal: https://alumni.alueducation.com/login
+Documentation: https://docs.alueducation.com/handbook.pdf
+Student WhatsApp line: +250 700 000 123
+Rwanda HQ: +250 252 580 100
+
+Payment deadline reminders are sent every Friday at 3:00 PM.
+Late fees apply after 5:30 PM on due date.
+
+#ALUNotice #StudentServices #Rwanda2024
+
+END OF LOG
+

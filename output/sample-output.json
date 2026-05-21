@@ -1,0 +1,134 @@
+{
+  "security_flags": [
+    "HOSTILE INPUT DETECTED: XSS, SQL injection, or JS URL found. Suspicious lines were stripped before extraction."
+  ],
+  "emails": [
+    {
+      "masked": "ad***@alueducation.com",
+      "category": "ALU Official",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "jo***@alumni.alueducation.com",
+      "category": "ALU Alumni",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "gr***@si.alueducation.com",
+      "category": "ALU SI",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "su***@alueducation.com",
+      "category": "ALU Official",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "am***@alumni.alueducation.com",
+      "category": "ALU Alumni",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "ko***@gmail.com",
+      "category": "External",
+      "valid_alu_domain": false
+    },
+    {
+      "masked": "le***@student.berlin.edu",
+      "category": "External",
+      "valid_alu_domain": false
+    },
+    {
+      "masked": "fi***@alueducation.com",
+      "category": "ALU Official",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "bi***@alueducation.com",
+      "category": "ALU Official",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "fa***@alueducation.com.attacker.net",
+      "category": "External",
+      "valid_alu_domain": false
+    },
+    {
+      "masked": "it***@alueducation.com",
+      "category": "ALU Official",
+      "valid_alu_domain": true
+    },
+    {
+      "masked": "it***@alueducation.com",
+      "category": "ALU Official",
+      "valid_alu_domain": true
+    }
+  ],
+  "urls": [
+    {
+      "url": "https://portal.alueducation.com/scholarships/renew?id=1042&token=abc123",
+      "suspicious": false,
+      "note": "OK"
+    },
+    {
+      "url": "http://my.alueducation.com",
+      "suspicious": false,
+      "note": "OK"
+    },
+    {
+      "url": "http://totally-legit-alu.phishing.io/reset?admin=true",
+      "suspicious": true,
+      "note": "Blocked \u2014 possible phishing URL"
+    },
+    {
+      "url": "https://alumni.alueducation.com/login",
+      "suspicious": false,
+      "note": "OK"
+    },
+    {
+      "url": "https://docs.alueducation.com/handbook.pdf",
+      "suspicious": false,
+      "note": "OK"
+    }
+  ],
+  "phone_numbers": [
+    "+49 30 1234 5678",
+    "+250 788 123 456",
+    "+250 252 580 100",
+    "+250 788 999 000",
+    "+250-789-000-111",
+    "+250 700 000 123"
+  ],
+  "credit_cards": [
+    {
+      "masked": "**** **** **** 1111",
+      "luhn_valid": true,
+      "flagged": false,
+      "note": "Passes Luhn check"
+    },
+    {
+      "masked": "**** **** **** 0004",
+      "luhn_valid": true,
+      "flagged": false,
+      "note": "Passes Luhn check"
+    },
+    {
+      "masked": "**** **** **** 8431",
+      "luhn_valid": true,
+      "flagged": false,
+      "note": "Passes Luhn check"
+    },
+    {
+      "masked": "**** **** **** 9424",
+      "luhn_valid": true,
+      "flagged": false,
+      "note": "Passes Luhn check"
+    },
+    {
+      "masked": "**** **** **** 0000",
+      "luhn_valid": false,
+      "flagged": true,
+      "note": "Rejected \u2014 dummy/invalid card"
+    }
+  ]
+}
