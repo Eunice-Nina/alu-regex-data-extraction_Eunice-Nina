@@ -8,7 +8,7 @@ security thinking throughout.
 
 ## Project Structure
 
-
+```
 alu-regex-data-extraction/
 ├── input/
 │   └── raw-text.txt        ← Realistic CRM-style log with messy data
@@ -22,6 +22,7 @@ alu-regex-data-extraction/
 
 
 ## How to Run
+
 
 
 ```bash
