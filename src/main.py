@@ -1,12 +1,11 @@
 """
 ALU Regex Data Extraction & Secure Validation
-Junior Frontend Developer Assignment
 
-Required extractions (4 total):
-  1. Email addresses     — mandatory (with ALU domain classification)
-  2. Credit card numbers — mandatory (with Luhn validation)
-  3. URLs               — free choice #1
-  4. Phone numbers      — free choice #2
+ Extractions made from raw text input:
+  1. Email addresses     
+  2. Credit card numbers 
+  3. URLs               
+  4. Phone numbers      
 
 Security: Flags hostile input, masks sensitive data,
           rejects suspicious patterns before processing.
@@ -66,7 +65,7 @@ def mask_email(email):
 # REGEX PATTERNS
 
 
-# ── 1. EMAILS ────────────────────────────────
+# 1.EMAILS 
 # Matches standard email format: local@domain.tld
 # Local part: starts with alphanumeric, allows dots/underscores/hyphens
 # Domain: at least one dot, TLD of 2+ letters
@@ -94,7 +93,7 @@ def classify_email(email):
     return "External"
 
 
-# ── 2. CREDIT CARDS ──────────────────────────
+# 2.CREDIT CARDS 
 # Covers three real-world formats:
 #   • Visa/Mastercard: 4 groups of 4 digits separated by space or hyphen
 #   • AmEx:            4-6-5 digit groups  (15 digits total)
@@ -126,7 +125,7 @@ def luhn_check(number):
     return total % 10 == 0
 
 
-# ── 3. URLs ───────────────────────────────────
+# 3.URLs 
 # Only accepts http:// or https:// — blocks javascript:, ftp:, data:
 # Stops at whitespace or unsafe characters ( " ' < > )
 URL_PATTERN = re.compile(
@@ -142,7 +141,7 @@ def is_suspicious_url(url):
     return any(kw in url.lower() for kw in SUSPICIOUS_URL_KEYWORDS)
 
 
-# ── 4. PHONE NUMBERS ─────────────────────────
+# 4.PHONE NUMBERS 
 # International format starting with + and country code
 # Allows digits, spaces, and hyphens as separators
 # Length: 8–18 characters after the + (covers most international numbers)
@@ -177,7 +176,7 @@ def extract_all(text):
     else:
         results["security_flags"].append("No hostile patterns detected.")
 
-    # ── 1. Emails ──
+    # 1. Emails 
     raw_emails = EMAIL_PATTERN.findall(text)
     seen_emails = set()
     for email in raw_emails:
@@ -192,7 +191,7 @@ def extract_all(text):
             "valid_alu_domain": category != "External"
         })
 
-    # ── 2. Credit Cards ──
+    # 2. Credit Cards 
     raw_cards = CREDIT_CARD_PATTERN.findall(text)
     seen_cards = set()
     for card in raw_cards:
@@ -212,7 +211,7 @@ def extract_all(text):
             "note":       "Rejected — dummy/invalid card" if flagged else "Passes Luhn check"
         })
 
-    # ── 3. URLs ──
+    # 3. URLs
     raw_urls = URL_PATTERN.findall(text)
     for url in raw_urls:
         suspicious = is_suspicious_url(url)
@@ -222,7 +221,7 @@ def extract_all(text):
             "note":       "Blocked — possible phishing URL" if suspicious else "OK"
         })
 
-    # ── 4. Phone Numbers ──
+    # 4. Phone Numbers
     raw_phones = PHONE_PATTERN.findall(text)
     results["phone_numbers"] = list(set(p.strip() for p in raw_phones))
 

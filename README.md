@@ -4,11 +4,11 @@ A Python program that extracts and validates structured data from raw,
 production-style text using regular expressions. Built with defensive
 security thinking throughout.
 
----
+
 
 ## Project Structure
 
-```
+
 alu-regex-data-extraction/
 ├── input/
 │   └── raw-text.txt        ← Realistic CRM-style log with messy data
@@ -17,13 +17,12 @@ alu-regex-data-extraction/
 ├── output/
 │   └── sample-output.json  ← JSON results from the last run
 └── README.md
-```
 
----
+
+
 
 ## How to Run
 
-**Requirements:** Python 3.8+ (no external libraries needed)
 
 ```bash
 # From the project root
@@ -32,18 +31,18 @@ python3 src/main.py
 
 Output is printed to the console and saved to `output/sample-output.json`.
 
----
+
 
 ## Data Types Extracted (4 total)
 
-| #  | Type            | Required?         | Notes                                  |
-|----|-----------------|-------------------|----------------------------------------|
-| 1  | Email addresses | Mandatory         | With ALU domain classification         |
-| 2  | Credit cards    | Mandatory         | Visa, MC, AmEx, Discover + Luhn check  |
-| 3  | URLs            | Free choice #1    | http/https only, phishing detection    |
-| 4  | Phone numbers   | Free choice #2    | International format with country code |
+| #  | Type            | Notes                                  |
+|----|-----------------|----------------------------------------|
+| 1  | Email addresses | With ALU domain classification         |
+| 2  | Credit cards    | Visa, MC, AmEx, Discover + Luhn check  |
+| 3  | URLs            | http/https only, phishing detection    |
+| 4  | Phone numbers   | International format with country code |
 
----
+
 
 ## ALU Email Classification
 
@@ -59,7 +58,7 @@ All extracted emails are automatically categorised by domain:
 The SI and Alumni checks run before the Official check to avoid the
 `@alueducation.com` pattern matching subdomains incorrectly.
 
----
+
 
 ## Security Measures
 
@@ -82,7 +81,7 @@ The SI and Alumni checks run before the Official check to avoid the
    `javascript:`, `data:`, and `ftp:` schemes are excluded by design.
    URLs are also checked against a list of known phishing keywords.
 
----
+
 
 ## Sample Output
 
